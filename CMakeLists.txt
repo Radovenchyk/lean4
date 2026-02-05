@@ -163,6 +163,10 @@ add_custom_target(update-stage0-commit COMMAND $(MAKE) -C stage1 update-stage0-c
 
 add_custom_target(test COMMAND $(MAKE) -C stage1 test DEPENDS stage1)
 
+add_custom_target(bench COMMAND $(MAKE) -C stage2 bench DEPENDS stage2)
+add_custom_target(bench-part1 COMMAND $(MAKE) -C stage2 bench-part1 DEPENDS stage2)
+add_custom_target(bench-part2 COMMAND $(MAKE) -C stage2 bench-part2 DEPENDS stage2)
+
 add_custom_target(clean-stdlib COMMAND $(MAKE) -C stage1 clean-stdlib DEPENDS stage1)
 
 install(CODE "execute_process(COMMAND make -C stage1 install)")
