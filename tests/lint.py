@@ -140,6 +140,7 @@ for file in Path().glob("**/*.out.ignored"):
     if file.with_suffix(".expected").exists():
         nag("has .expected", file)
 
+# TODO .no_test but .out.expected/.out.ignored
 
 # Special cases for certain directories
 
